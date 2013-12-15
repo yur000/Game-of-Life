@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Game of Life</title>
+	<link rel="icon" type="image/png" href="images/icon.png">
+	<link rel="stylesheet" type="text/css" href="css/body.css">
+	<link rel="stylesheet" type="text/css" href="css/mylib.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/mylib.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/World.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			initialize('create');
+		};
+	</script>
+</head>
+
+<body>
+	<div id="GameOfLife">
+		<div class="table">
+
+			<div id="formcell" class="cell">
+				<div class="form board">
+					<div id="form" class="table border-box">
+
+						<div class="row">
+							<div class="cell">
+								<p>Rows:</p>
+							</div>
+							<div class="cell">
+								<input id="rows" type="text" value="15">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell">
+								<p>Columns:</p>
+							</div>
+							<div class="cell">
+								<input id="columns" type="text" value="30">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell">
+								<p>Generations:</p>
+							</div>
+							<div class="cell">
+								<input id="generations" type="text" value="200">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell">
+								<p>Speed (ms):</p>
+							</div>
+							<div class="cell">
+								<input id="speed" type="text" value="100">
+							</div>
+						</div>
+					</div>
+
+					<div class="buttons">
+						<button id="create" class="button">Create</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="worldcell" class="cell" style="display: none">
+				<div class="world board">
+					<div id="info"></div>
+					<div id="world" class="table unselectable"></div>
+
+					<div class="buttons">
+						<button class="button" id="back" >Back</button>
+						<button class="button" id="randomize">Randomize</button>
+						<button class="button" id="clear">Clear</button>	
+						<button class="button" id="start">Start</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="about">
+			<p>Game of Life [v0.6.1]</p>
+			<p>by <a href="http://vk.com/hybr1dmax" target="_blank">hybr1dmax</a></p>
+		</div>
+	</div>
+</body>
+
+</html>

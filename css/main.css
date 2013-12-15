@@ -1,0 +1,191 @@
+/* -------------------Main Style----------------------- */
+@font-face {
+	font-family: Calibri;
+	src: 
+		local("Calibri"),
+		local("calibri"),
+		url(../ttf/calibri.ttf);
+}
+
+DIV#GameOfLife {
+	width: 100%;
+	height: 100%;
+
+	background: url(../images/texture.png) repeat;
+}
+	#GameOfLife * {
+		font-family: Calibri;
+	}
+	#GameOfLife H1, 
+	#GameOfLife H2, 
+	#GameOfLife H3, 
+	#GameOfLife H4, 
+	#GameOfLife H5, 
+	#GameOfLife P {
+		padding: 0;
+		margin: 0;
+	}
+
+	#GameOfLife DIV.board {
+		background: white;
+		padding: 20px;
+		border-radius: 20px;
+
+		box-shadow: 0 0 50px white;
+
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+
+	#GameOfLife DIV.buttons {
+		display: table;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+		#GameOfLife .buttons BUTTON {
+			display: table-cell;
+			padding: 5px 10px;
+			margin: 0px 5px;
+		}
+
+		#GameOfLife BUTTON.button {
+			border: 1px solid #3c1f05;
+			background: linear-gradient(to top, #e8e8e8, #ffffff);
+			box-shadow: 2px 2px 5px #a2a2a2;
+			height: 35px;
+
+			border-radius: 5px;
+			font-size: 15px;
+			vertical-align: middle;
+
+			cursor: pointer;
+		}
+
+			#GameOfLife BUTTON.button {
+				outline: none;
+			}
+
+			#GameOfLife BUTTON.button::-moz-focus-inner {
+				border: 0;
+			}
+
+			#GameOfLife BUTTON.button:hover {
+				background: linear-gradient(to top, #efdfd0, #ffffff);
+			}
+
+			#GameOfLife BUTTON#start, 
+			#GameOfLife BUTTON#start.stopped {
+				background: linear-gradient(to top, #b0ffaa, #ffffff); /* green */
+			}
+
+			#GameOfLife BUTTON#start.started {
+				background: linear-gradient(to top, #ffaaaa, #ffffff); /* red */
+			}
+
+			#GameOfLife INPUT {
+				border: 1px solid black;
+				background-color: #e8e8e8;
+				text-align: center;
+			}
+
+			#GameOfLife INPUT:focus {
+				background-color: #efdfd0;
+			}
+/* -------------------Page----------------------- */
+DIV#GameOfLife, DIV#GameOfLife > DIV.table {
+	width: 100%;
+	height: 100%;
+}
+	DIV#GameOfLife > DIV.table {
+		table-layout: fixed;
+	}
+		DIV#GameOfLife > DIV.table > DIV.cell {
+			vertical-align: middle;
+			padding: 0px 15px;
+		}
+			DIV#GameOfLife > DIV.table > DIV.cell > DIV {
+				margin: 0 auto;
+			}
+
+	#GameOfLife DIV.form {
+		display: table;
+	}
+		#GameOfLife DIV.form > DIV.table {
+			width: 100%;
+			height: 100%;
+		}
+
+			#GameOfLife .form .table .row DIV.cell {
+				padding: 10px 5px;
+			}
+			#GameOfLife .form .table .row .cell > * {
+				vertical-align: middle;
+			}
+
+			#GameOfLife .form .table .row DIV.cell:nth-child(1) {
+				text-align: right;
+				max-width: 100px;
+			}
+
+			#GameOfLife .form .table .row DIV.cell:nth-child(2) {
+				width: 50px;
+				text-align: left;
+			}
+					#GameOfLife .form INPUT {
+						width: 50px;
+						height: 20px;
+						line-height: 20px;
+					}
+/* -------------------World----------------------- */
+			#GameOfLife DIV.world {
+				display: table;
+			}
+				#GameOfLife .world DIV.table, .world .table DIV.cell {
+					border: 1px solid gray;
+				}
+				#GameOfLife .world .table DIV.cell {
+					width: 20px;
+					height: 20px;
+					cursor: pointer;
+				}
+				#GameOfLife .world .table .cell DIV.dead:hover {
+					background-color: red;
+				}
+				#GameOfLife .world .table .cell DIV.live {
+					background-color: #3c1f05;
+				}
+				#GameOfLife .world .table .cell DIV.dead {
+					background-color: white;
+				}
+				#GameOfLife .world .table .cell DIV.live, .world .table .cell DIV.dead {
+					width: 100%;
+					height: 100%;
+				}
+			#GameOfLife DIV#world {
+				margin: 0 auto;
+			}
+			#GameOfLife #info P {
+				text-align: center;
+				vertical-align: middle;
+				margin-bottom: 10px;
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 20px;
+			}
+/* -------------------About----------------------- */
+	#GameOfLife DIV.about {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+
+		margin: 10px;
+	}
+		#GameOfLife .about P, #GameOfLife .about A {
+			font-size: 18px;
+			line-height: 18px;
+			color: white;
+			margin: 0;
+			padding: 0;
+		}
+
+				
