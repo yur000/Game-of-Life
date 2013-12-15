@@ -27,13 +27,6 @@ function World(rowsIn, columnsIn, generationsIn, speedIn) {
 	this.createBuffer();
 }
 /* ---------------------------------------------------------------------------------- */
-World.prototype.toString = function() {
-	return "Rows: " + this.rows + 
-	", Columns: " + this.columns + 
-	", Generations: " + this.generations + 
-	", Speed: " + this.speed;
-};
-/* ---------------------------------------------------------------------------------- */
 World.prototype.create = function() {
 
 	this.printHeader();
@@ -174,5 +167,12 @@ World.prototype.startManager = function(mode) {
 		}
 		button.className = 'button stopped';
 	}
+};
+/* ---------------------------------------------------------------------------------- */
+World.prototype.toString = function() {
+	return "Rows: " + this.rows + 
+	", Columns: " + this.columns + 
+	", Generations: " + this.generations + 
+	", Speed: " + this.speed;
 };
 /* ---------------------------------------------------------------------------------- */
