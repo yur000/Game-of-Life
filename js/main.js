@@ -62,8 +62,11 @@ function showBlock(which) {
 /* ---------------------------------------------------------------------------------- */
 function touchLife(life) {
 
-	if(life.className == lifeClassName('dead')) life.className = lifeClassName('live');
-	else life.className = lifeClassName('dead');
+	if(life.className == lifeClassName('dead')) {
+		life.className = lifeClassName('live');
+	} else {
+		life.className = lifeClassName('dead');
+	}
 }
 
 /* ---------------------------------------------------------------------------------- */

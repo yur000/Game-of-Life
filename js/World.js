@@ -101,8 +101,10 @@ World.prototype.printHeader = function() {
 		}
 	}
 	
-	this.infoDIV.children[0].innerHTML = 'Generation: ' + this.generationCurrent + '/' + this.generations;
-	this.infoDIV.children[1].innerHTML = 'Universe: ' + this.rows + 'x' + this.columns + ', Speed: ' + this.speed + 'ms';
+	this.infoDIV.children[0].innerHTML = 'Generation: ' + this.generationCurrent + '/' 
+		+ this.generations;
+	this.infoDIV.children[1].innerHTML = 'Universe: ' + this.rows + 'x' + this.columns + 
+		', Speed: ' + this.speed + 'ms';
 };
 /* ---------------------------------------------------------------------------------- */
 World.prototype.randomize = function() {
@@ -126,7 +128,9 @@ World.prototype.clear = function() {
 
 	for(var i=0; i<array.length; i++) {
 		for(var j=0; j<array[i].length; j++) {
-			if(array[i][j].className == lifeClassName('live')) array[i][j].className = lifeClassName('dead');
+			if(array[i][j].className == lifeClassName('live')) {
+				array[i][j].className = lifeClassName('dead');
+			}
 		}
 	}
 };
